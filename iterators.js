@@ -26,7 +26,7 @@ const toCelsius = function (temperatures) {
   let conversion = temperatures.map((i) => (i - 32) * (5 / 9));
   return conversion;
 };
-toCelsius([23,80,90,67])
+
 /**************************************
  * hottestDays(temperatures, threshhold)
  *
@@ -60,10 +60,7 @@ const hottestDays = function (temperatures, threshhold) {
  *******************************************/
 const logHottestDays = function (temperatures, threshhold) {
   // Your code here
-
-  logger([temperatures]);
-  toCelsius([temperatures]);
-  hottestDays([temperatures]);
+  logger(toCelsius(hottestDays(temperatures,threshhold)));
 
 
 
