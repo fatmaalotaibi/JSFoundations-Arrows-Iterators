@@ -26,7 +26,7 @@ const toCelsius = function (temperatures) {
   let conversion = temperatures.map((i) => (i - 32) * (5 / 9));
   return conversion;
 };
-
+toCelsius([23,80,90,67])
 /**************************************
  * hottestDays(temperatures, threshhold)
  *
@@ -61,16 +61,10 @@ const hottestDays = function (temperatures, threshhold) {
 const logHottestDays = function (temperatures, threshhold) {
   // Your code here
 
-  const temperaturesLarger = temperaturesLarger.filter(
-    (i) => temperatures > threshhold
-  );
-  return temperaturesLarger;
-};
+  logger([temperatures]);
+  toCelsius([temperatures]);
+  hottestDays([temperatures]);
 
-let conversion = temperatures.map((i) => (i - 32) * (5 / 9));
-return conversion;
-{
-  array.forEach((i) => console.log(i));
-}
+
 
 module.exports = { logger, toCelsius, hottestDays, logHottestDays };
